@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import CartPage from './page/cart';
 import Menu from './page/menu';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -9,7 +10,12 @@ function App() {
   const [count, setCount] = useState(0)
   //getKey();
 
+  
   /*
+
+  Fixa upp hämtning, kanske inte behövs på mer än 1 sida
+  Fixa css om tid finns
+
     Det ska gå att hämta och visa menyn
     Det ska gå att kunna lägga till produkter i en varukorg
     Det ska gå att kunna ta bort produkter från en varukorg
@@ -20,7 +26,7 @@ function App() {
 
   return (
     <div className='main'>
-      <Menu />
+      <CartPage />
     </div>
   )
 }

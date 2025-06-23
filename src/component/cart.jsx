@@ -1,7 +1,7 @@
-function Cart() {
+function Cart({ hideCounter }) {
     return (
         <>
-            <span className="counter">0</span>
+            {!hideCounter && <span className="counter">0</span>}
             <div className="cart"><i className="fas fa-shopping-cart"></i></div>
         </>
     );

@@ -6,10 +6,31 @@
   color: black;
 }
 .main {
-    background-image: url('/bg.png');
-    background-color: #8ED88F;
     width: 390px;
     height: 844px;
+}
+.mainMenu {
+    background-image: url('/bg.png');
+    background-color: #8ED88F;
+}
+.mainCart {
+  height: 100%;
+  position: relative;
+  background-color: #EEEEEE;
+  .list-container {
+    background-color: #EEEEEE;
+    color: #353131;
+    .items{
+      border-bottom: 0px;
+      padding-top: 0px;
+    }
+    .line {
+      border-bottom: 1px dotted rgba(53, 49, 49, 1);
+    }
+    .title, .cost {
+      text-shadow: none;
+    }
+  }
 }
 
 /* - Header - */
@@ -55,6 +76,42 @@
 }
 
 /* - List - */
+
+.bottom-container {
+  position: absolute;
+  bottom: 0;
+  padding: 16px 16px;
+  .bottom-container-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    background-color: rgba(53, 49, 49, 0.24);
+    height: 70px;
+    width: 358px;
+    font-weight: 700;
+    text-transform: uppercase;
+    .bottom-total {
+      font-size: 22px;
+    }
+    .bottom-cost {
+      font-size: 32px;
+    }
+  }
+  .bottom-container-confirm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #353131;
+    height: 77px;
+    width: 358px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(244, 243, 241, 0.94);
+  }
+}
+
 .list-container {
   background-color: #605858;
   color: #F1F0EC;
@@ -98,6 +155,7 @@
 
 #wonton .items:hover {
   background-color: rgba(241, 240, 236, 0.12);
+  cursor: pointer;
 }
 
 /* - Button - */

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 function MenuItem( { getType } ) {
+    
     const [data, setData] = useState(null); // create an array
     useEffect(() => {
         fetch("https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/menu", {
