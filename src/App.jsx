@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className='main'>
-      <CartPage />
+      <Menu />
     </div>
   )
 }

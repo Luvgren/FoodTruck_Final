@@ -1,10 +1,10 @@
-import MenuItem from "../component/Item/menuItem";
+import CartItem from "../component/Item/cartItem";
 // ohoy glöm inte att ändra tillbaka
 function ListCart({ type }) {
     return (
         <>
         <div className="list-container">
-            <MenuItem getType="wonton" />
+            <CartItem getType="wonton" />
         </div>
         <div className="bottom-container">
             <div className="bottom-container-total">
