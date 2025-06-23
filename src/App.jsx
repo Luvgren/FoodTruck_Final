@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import CartPage from './page/cart';
+import Confirm from './page/confirm';
+import Order from './page/order';
 import Menu from './page/menu';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
