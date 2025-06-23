@@ -1,6 +1,9 @@
 function Cart() {
     return (
-        <img src={`logo.svg`} alt="Your cart" />
+        <>
+            <span className="counter">0</span>
+            <div className="cart"><i className="fas fa-shopping-cart"></i></div>
+        </>
     );
 }
 

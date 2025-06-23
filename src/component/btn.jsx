@@ -1,8 +1,6 @@
-function Btn({ type, text }) {
-    const btnType = type;
+function Btn({ id, text }) {
     return (
-        <button className="btn">{text} - {btnType}</button>
+        <button id={id} className="btn btn-default">{text}</button>
     );
 }
-
-export default Logotype
+export default Btn

@@ -5,14 +5,13 @@ import List from "../component/list";
 function Menu() {
   return (
     <>
-    <div className="header bg-primary">
+    <div className="header">
       <div className="row">
         <div className="col">
-          <Logotype type="logo" />
+          <Logotype type="logo-white" />
         </div>
         <div className="col text-end">
           <Cart />
-          <span className="badge bg-danger">0</span>
         </div>
       </div>
     </div>

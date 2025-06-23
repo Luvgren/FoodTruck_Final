@@ -1,7 +1,7 @@
 function Logotype({ type }) {
     const logotype = type && type.trim() !== "" ? type : "logo";
     return (
-        <img src={`${logotype}.svg`} alt="Logotype Yum Yum Gimme sum" />
+        <img className="logo" src={`${logotype}.png`} alt="Logotype Yum Yum Gimme sum" />
     );
 }
 

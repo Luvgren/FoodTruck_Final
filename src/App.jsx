@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import Menu from './page/menu';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css'
-import getKey from './utils';
+//import getKey from './utils';
 
 function App() {
   const [count, setCount] = useState(0)
-  getKey();
+  //getKey();
 
   /*
     Det ska gå att hämta och visa menyn
