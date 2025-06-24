@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import Btn from "../../component/btn";
+import Btn from "./btn";
+import { useGetMenuItemsQuery } from '../api/data';
 
 function menuDip( { getType, setCount }) {
 
-    const [data, setData] = useState(null); // create an array
-    useEffect(() => {
-        fetch("https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/menu", {
-            headers: {
-                'accept': 'application/json',
-                'x-zocom': 'yum-7BTxHCyHhzI'
-            }
-        })
-        .then((res) => res.json())
-        .then(data => {
-            setData(data);
-        });
-    }, []);
-
+    const { data } = useGetMenuItemsQuery(); // Get query
     const filteredItems = Array.isArray(data?.items) ? data.items.filter(item => item.type === getType) : []; // Get the array
     const firstPrice = filteredItems.length > 0 ? filteredItems[0].price : null; //... and then pick the first price of dip (since they all cost the same)
 
@@ -34,7 +21,13 @@ function menuDip( { getType, setCount }) {
             {Array.isArray(data?.items)
             ? data.items
                 .filter(item => item.type === getType)
-                .map(item => ( <Btn key={item.id} id={item.id} text={item.name} setCount={setCount} /> ))
+                .map(item => ( 
+                    <Btn 
+                        key={item.id} 
+                        id={item.id} 
+                        text={item.name} 
+                        setCount={setCount}
+                    /> ))
             : ''}
         </div>
         </>

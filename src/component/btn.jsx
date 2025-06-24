@@ -1,6 +1,9 @@
+import { toggleArrayItem } from '../functions/addToCart';
 function Btn({ id, text, setCount }) {
     return (
-        <button onClick={() => setCount((count) => count + 1)} id={id} className="btn btn-default">{text}</button>
+        <button id={id} className="btn btn-default" 
+                onClick={() => setCount((prev) => toggleArrayItem(prev, id))}> 
+        {text}</button>
     );
 }
 export default Btn

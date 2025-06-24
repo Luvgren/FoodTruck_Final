@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useGetMenuItemsQuery } from '../../api/data';
+import { toggleArrayItem } from '../../functions/addToCart';
 
 function MenuItem( { getType , setCount} ) {
-    
-    const [data, setData] = useState(null); // create an array
-    useEffect(() => {
-        fetch("https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/menu", {
-            headers: {
-                'accept': 'application/json',
-                'x-zocom': 'yum-7BTxHCyHhzI'
-            }
-        })
-        .then((res) => res.json())
-        .then(data => {
-            setData(data);
-        });
-    }, []);
+    const { data, error, isLoading } = useGetMenuItemsQuery(); // Get query
+    if (isLoading) return <div className='text-center'>Loading...</div>;
+    if (error) return <div className='text-center'>Error loading menu.</div>;
 
     return (
         <>
@@ -23,7 +13,8 @@ function MenuItem( { getType , setCount} ) {
                     ? data.items
                         .filter(item => item.type === getType)
                         .map(item => (
-                        <div onClick={() => setCount((count) => count + 1)} className='items' key={item.id} id={item.id}>
+                        <div className='items' key={item.id} id={item.id}
+                            onClick={() => setCount((prev) => toggleArrayItem(prev, item.id))}>
                             <div className='d-flex justify-content-between align-items-baseline'>
                             <span className='title pe-2'>{item.name}</span>
                             <span className='line'></span>
@@ -32,7 +23,7 @@ function MenuItem( { getType , setCount} ) {
                             <div className='ingredients'>{item.ingredients?.join(', ')}</div>
                         </div>
                         ))
-                    : 'Loading...'}
+                    : <div className='text-center'>Loading...</div>}
             </div>
         </>
     );

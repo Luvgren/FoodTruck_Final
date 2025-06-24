@@ -1,5 +1,5 @@
 import MenuItem from "./Item/menuItem";
-import MenuDip from "./menu/menuDip";
+import MenuDip from "./menuDip";
 
 function ListMenu({ type, setCount }) {
     return (
