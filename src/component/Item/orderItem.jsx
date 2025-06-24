@@ -13,7 +13,6 @@ function OrderItem( { getType } ) {
         .then((res) => res.json())
         .then(data => {
             setData(data);
-            console.log(data); // Check the structure in your browser console
         });
     }, []);
 

@@ -14,10 +14,7 @@ export const apiSlice = createApi({
     endpoints: (builder) => ({
         getMenuItems: builder.query({
             query: () => `menu`,
-        }),
-        getMenuById: builder.query({
-            query: (id) => `menu/${id}`,
-        }),
+        })
 
     /* WHEN POST ADD TENANT {
         "id": "gk1z",

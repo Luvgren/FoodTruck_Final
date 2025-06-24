@@ -22,6 +22,8 @@ function App() {
    - fixa ./../.. vägar
    - visa vilka som är valda
    - lägg till drickor
+   - onclick fort. i cart i listan
+   - when click back förlorar js counter, kanske ska lägga på det direkt i dispatch
    */
   return (
     <div className='main'>

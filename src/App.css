@@ -19,10 +19,17 @@
   height: 100%;
   position: relative;
   background-color: #EEEEEE;
+  .cart {
+    cursor: default;
+  }
+  .cart:active, .cart:hover {
+    background-color: #F4F3F1;
+  }
   .list-container {
     background-color: #EEEEEE;
     color: #353131;
     .items{
+      height: 56px;
       border-bottom: 0px;
       padding-top: 0px;
     }
@@ -183,6 +190,12 @@
     color: #605858;
   }
 }
+.cart:hover{
+    background-color: rgba(244, 243, 241, 0.90);
+}
+.cart:active{
+    background-color: rgb(255, 255, 255);
+}
 .counter {
   position: absolute;
   background-color: #EB5757;
@@ -304,4 +317,14 @@
 }
 .btn-default:hover {
   background-color: #353131;
+}
+.back {
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  height: 64px;
+  width: 64px;
+  font-size: 1.8em;
+  color: #605858;
+  background-color: transparent;
 }

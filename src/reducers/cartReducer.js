@@ -4,10 +4,11 @@ const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-        addToCart( state, action ){
-            console.log('State är: ', state);
-            console.log('Action är: ', action);
-            state.push(action.payload); // Ohoy kontrollera om produkten redan finns, lägg annars inte till.
+        addToCart(state, action) {
+            //const exists = state.find(item => item.id === action.payload.id);
+            if (!state.includes(action.payload)) {
+                state.push(action.payload);
+            }
         }
     }
 });

@@ -5,11 +5,6 @@ import { useState, useEffect } from 'react';
 
 function Menu() {
   const [count, setCount] = useState([]); // Array with menu IDs
-
-  useEffect(() => {
-    console.log('Current count array:', count);
-  }, [count]);
-
   return (
     <div className="mainMenu">
       <div className="header">
@@ -18,7 +13,7 @@ function Menu() {
             <Logotype type="logo-white" />
           </div>
           <div className="col text-end">
-            <Cart hideCounter={false} count={count.length} />
+            <Cart hideCounter={false} count={count} />
           </div>
         </div>
       </div>
