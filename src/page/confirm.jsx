@@ -1,6 +1,10 @@
 import Logotype from "../component/logotype";
+import { useNavigate } from "react-router-dom";
 
 function Confirm() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="mainConfirm">
       <div className="header">
@@ -18,8 +22,8 @@ function Confirm() {
             <div className="confirm-id">#4KJWSADF123K</div>
         </div>
         <div className="container-confirm-bottom">
-            <div className="confirm-bottom-new">Gör en ny beställning</div>
-            <div className="confirm-bottom-order">Se kvitto</div>
+            <div className="confirm-bottom-new" onClick={() => navigate("/")}>Gör en ny beställning</div>
+            <div className="confirm-bottom-order" onClick={() => navigate("/order")}>Se kvitto</div>
         </div>
       </div>
     </div>

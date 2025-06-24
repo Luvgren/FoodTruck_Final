@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useGetMenuItemsQuery } from "../api/data";
+import { useNavigate } from "react-router-dom";
 import CartItem from "../component/Item/cartItem";
 
 function ListCart({ type }) {
 
+    const navigate = useNavigate();
     const cart = useSelector(state => state.cart); // array of IDs
     const { data } = useGetMenuItemsQuery();
     const menuItems = Array.isArray(data) ? data : data?.items || [];
@@ -21,7 +23,7 @@ function ListCart({ type }) {
                     <span className="bottom-total">Totalt</span>
                     <span className="bottom-cost">{total} SEK</span>
                 </div>
-                <div className="bottom-container-confirm">
+                <div className="bottom-container-confirm" onClick={() => navigate("/confirm")}>
                     Take my money!
                 </div>
             </div>

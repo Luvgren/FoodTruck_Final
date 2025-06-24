@@ -8,9 +8,9 @@ import router from './router/router';
 function App() {
 
   /*
-    Det ska gå att hämta och visa menyn
-    Det ska gå att kunna lägga till produkter i en varukorg
-    Det ska gå att kunna ta bort produkter från en varukorg
+    YES - Det ska gå att hämta och visa menyn
+    YES - Det ska gå att kunna lägga till produkter i en varukorg
+    YES - Det ska gå att kunna ta bort produkter från en varukorg
 
     Det ska gå att kunna växla mellan vyer (menyn, till varukorgen, till se beställning, till se kvitto)
     Det ska gå och kunna lägga en beställning och få tillbaka ett ordernummer och en ETA (Estimated Time of Arrival)
@@ -24,6 +24,7 @@ function App() {
    - lägg till drickor
    - onclick fort. i cart i listan
    - when click back förlorar js counter, kanske ska lägga på det direkt i dispatch
+   - kolla över btn så vi kan använda det på mer än 1 ställe och lägg till onclick
    */
   return (
     <div className='main'>

@@ -117,7 +117,11 @@
       font-size: 24px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: .1em;
+    }
+    .order-line {
+      opacity: .5;
+      border-bottom: 1px dotted rgba(53, 49, 49, 1);
+      flex-grow: 1;
     }
     .order-id {
       font-size: 12px;
@@ -131,16 +135,25 @@
       background-color: rgba(53, 49, 49, 0.24);
       height: 68px;
       padding: 0px 16px;
-      .order-total{
+      .bottom-container-total {
         text-align: left;
+        .order-total{
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        .order-moms {
+          font-size: 12px;
+          font-weight: 400;
+        }
       }
-      .order-cost {
-        text-align: right;
-        font-size: 24px;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding-top: 10px;
-      }
+    }
+    .order-cost {
+      text-align: right;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-top: 10px;
     }
   }
   .container-order-bottom{

@@ -1,25 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useSelector } from "react-redux";
+import { useGetMenuItemsQuery } from "../../api/data";
 
 function OrderItem( { getType } ) {
     
-    const [data, setData] = useState(null); // create an array
-    useEffect(() => {
-        fetch("https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/menu", {
-            headers: {
-                'accept': 'application/json',
-                'x-zocom': 'yum-7BTxHCyHhzI'
-            }
-        })
-        .then((res) => res.json())
-        .then(data => {
-            setData(data);
-        });
-    }, []);
+    const cart = useSelector(state => state.cart); // array of IDs
+    const { data } = useGetMenuItemsQuery();
+    const menuItems = Array.isArray(data) ? data : data?.items || [];
+    const cartItems = menuItems.filter(item => cart.includes(item.id));
 
     return (
         <>
             <div id={getType}>
-                test
+                {cartItems.length === 0 ? (
+                    <div>Your cart is empty.</div>
+                ) : (
+                    cartItems.map(item => (
+                        <div className='items' key={item.id}>
+                            <div className='d-flex justify-content-between align-items-baseline'>
+                                <span className='order-title pe-2'>{item.name}</span>
+                                <span className='order-line'></span>
+                                <span className='order-cost ps-2'>{item.price} SEK</span>
+                            </div>
+                            <div className='text-start mb-3'>3 stycken</div>
+                        </div>
+                    ))
+                )}
             </div>
         </>
     );
