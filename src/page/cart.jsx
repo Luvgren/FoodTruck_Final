@@ -7,7 +7,7 @@ function CartPage() {
       <div className="header">
         <div className="row">
           <div className="col text-end">
-            <Cart hideCounter={true}/>
+            <Cart hideCounter={true} count="0"/>
           </div>
         </div>
       </div>

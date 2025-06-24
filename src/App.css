@@ -280,6 +280,10 @@
   background-color: rgba(241, 240, 236, 0.12);
   cursor: pointer;
 }
+#wonton .items:active {
+  background-color: rgba(241, 240, 236, 0.20);
+  cursor: pointer;
+}
 
 /* - Button - */
 .btn-container {

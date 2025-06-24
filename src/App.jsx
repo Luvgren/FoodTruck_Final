@@ -9,7 +9,6 @@ import './App.css'
 //import getKey from './utils';
 
 function App() {
-  const [count, setCount] = useState(0)
   //getKey();
 
   

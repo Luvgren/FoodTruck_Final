@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Btn from "../../component/btn";
 
-function menuDip( { getType }) {
+function menuDip( { getType, setCount }) {
 
     const [data, setData] = useState(null); // create an array
     useEffect(() => {
@@ -30,12 +30,11 @@ function menuDip( { getType }) {
                 </div>
             </div>
 
-
         <div className="btn-container pt-0">
             {Array.isArray(data?.items)
             ? data.items
                 .filter(item => item.type === getType)
-                .map(item => ( <Btn key={item.id} id={item.id} text={item.name} /> ))
+                .map(item => ( <Btn key={item.id} id={item.id} text={item.name} setCount={setCount} /> ))
             : ''}
         </div>
         </>
