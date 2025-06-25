@@ -1,5 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const tenantId = 'gk1z';
+const tenantName = 'elinl';
+
 // Create a default api get
 export const apiSlice = createApi({
     reducerPath: "api",
@@ -14,12 +17,17 @@ export const apiSlice = createApi({
     endpoints: (builder) => ({
         getMenuItems: builder.query({
             query: () => `menu`,
+        }),
+        createOrder: builder.mutation({
+            query: (orderPayload) => ({
+                url: `${tenantId}/orders`,
+                method: 'POST',
+                body: orderPayload
+            })
+        }),
+        getOrders: builder.query({
+            query: () => `${tenantId}/orders`,
         })
-
-    /* WHEN POST ADD TENANT {
-        "id": "gk1z",
-        "name": "elinl"
-    */
    }),
 })
-export const { useGetMenuItemsQuery, useGetMenuByIdQuery } = apiSlice;
+export const { useGetMenuItemsQuery, useCreateOrderMutation, useGetOrdersQuery } = apiSlice;

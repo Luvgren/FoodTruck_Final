@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Menu from "../page/menu";
 import Cart from "../page/cart";
 import Confirm from "../page/confirm";
-import Order from "../page/order";
+import Orders from "../page/orders";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         element: <Confirm />,
     },
     {
-        path: "/order",
-        element: <Order />,
+        path: "/orders",
+        element: <Orders />,
     }
 ])
 export default router;

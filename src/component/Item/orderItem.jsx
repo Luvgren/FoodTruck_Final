@@ -1,9 +1,15 @@
 import React from 'react';
 import { useSelector } from "react-redux";
 import { useGetMenuItemsQuery } from "../../api/data";
+import { useLocation } from "react-router-dom";
 
 function OrderItem( { getType } ) {
     
+    const location = useLocation();
+    const order = location.state?.order;
+
+    // {order ? `#${order.id}` : ""}
+
     const cart = useSelector(state => state.cart); // array of IDs
     const { data } = useGetMenuItemsQuery();
     const menuItems = Array.isArray(data) ? data : data?.items || [];
@@ -13,7 +19,7 @@ function OrderItem( { getType } ) {
         <>
             <div id={getType}>
                 {cartItems.length === 0 ? (
-                    <div>Your cart is empty.</div>
+                    <div>Du har ingen aktiv order.</div>
                 ) : (
                     cartItems.map(item => (
                         <div className='items' key={item.id}>

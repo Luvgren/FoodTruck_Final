@@ -23,7 +23,7 @@ function Confirm() {
         </div>
         <div className="container-confirm-bottom">
             <div className="confirm-bottom-new" onClick={() => navigate("/")}>Gör en ny beställning</div>
-            <div className="confirm-bottom-order" onClick={() => navigate("/order")}>Se kvitto</div>
+            <div className="confirm-bottom-order" onClick={() => navigate("/orders")}>Se kvitto</div>
         </div>
       </div>
     </div>

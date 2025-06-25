@@ -6,18 +6,11 @@ import { RouterProvider } from 'react-router-dom';
 import router from './router/router';
 
 function App() {
-
   /*
-    YES - Det ska gå att hämta och visa menyn
-    YES - Det ska gå att kunna lägga till produkter i en varukorg
-    YES - Det ska gå att kunna ta bort produkter från en varukorg
 
-    Det ska gå att kunna växla mellan vyer (menyn, till varukorgen, till se beställning, till se kvitto)
-    Det ska gå och kunna lägga en beställning och få tillbaka ett ordernummer och en ETA (Estimated Time of Arrival)
-    Det ska gå och kunna se sitt kvitto på sin beställning
-  */
+- Viktigt se över hur swagger namnger, kanske behöver ändra mitt... Receipt
 
-  /*
+
    - fixa css
    - fixa ./../.. vägar
    - visa vilka som är valda

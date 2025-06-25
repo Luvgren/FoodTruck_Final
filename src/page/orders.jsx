@@ -1,17 +1,12 @@
 import Logotype from "../component/logotype";
 import ListOrder from "../component/listOrder";
-import { useSelector } from "react-redux";
-import { useGetMenuItemsQuery } from "../api/data";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-function Order() {
+function Orders() {
 
   const navigate = useNavigate();
-  const cart = useSelector(state => state.cart); // array of IDs
-  const { data } = useGetMenuItemsQuery();
-  const menuItems = Array.isArray(data) ? data : data?.items || [];
-  const cartItems = menuItems.filter(item => cart.includes(item.id));
-  const total = cartItems.reduce((sum, item) => sum + (item.price || 0), 0);
+  const location = useLocation();
+  const order = location.state?.order;
 
   return (
     <div className="mainOrder">
@@ -27,7 +22,7 @@ function Order() {
         <div className="container-order">
           <Logotype type="logo" />
           <div className="order-title">Kvitto</div>
-          <div className="order-id">#4KJWSADF123K</div>
+          <div className="order-id">{order ? `#${order.id}` : ""}</div>
           <ListOrder type={"order"} />
         </div>
 
@@ -38,7 +33,7 @@ function Order() {
                 <div className="order-total">Totalt</div>
                 <div className="order-moms">inkl 20% moms</div>
               </div>
-              <div className="col order-cost">{total} SEK</div>
+              <div className="col order-cost">{order ? `${order.orderValue}` : "0"} SEK</div>
             </div>
           </div>
         </div>
@@ -51,4 +46,4 @@ function Order() {
   )
 }
 
-export default Order
+export default Orders
