@@ -1,10 +1,10 @@
 import Logotype from "../component/logotype";
 import ListOrder from "../component/listOrder";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import NewOrderBtn from "../component/btn/newOrderBtn";
 
 function Orders() {
 
-  const navigate = useNavigate();
   const location = useLocation();
   const order = location.state?.order;
 
@@ -39,8 +39,8 @@ function Orders() {
         </div>
 
       </div>
-      <div className="container-order-bottom">
-          <div className="order-bottom-new" onClick={() => navigate("/")}>Gör en ny beställning</div>
+      <div className="container-Btn">
+        <NewOrderBtn />
       </div>
     </div>
   )

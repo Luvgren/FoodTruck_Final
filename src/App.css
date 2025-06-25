@@ -71,6 +71,8 @@
       padding-bottom: 20px;
     }
   }
+  
+  /* ta bort? ohoy */
   .container-confirm-bottom {
     font-size: 24px;
     font-weight: 700;
@@ -154,23 +156,6 @@
       font-weight: 700;
       text-transform: uppercase;
       padding-top: 10px;
-    }
-  }
-  .container-order-bottom{
-    position: absolute;
-    width: 358px;
-    bottom: 0;
-    margin-bottom: 16px;
-    .order-bottom-new {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #353131;
-      height: 77px;
-      border-radius: 4px;
-      font-size: 24px;
-      text-transform: uppercase;
-      color: rgba(244, 243, 241, 0.94);
     }
   }
 }
@@ -340,4 +325,33 @@
   font-size: 1.8em;
   color: #605858;
   background-color: transparent;
+}
+
+.container-Btn{
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  bottom: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: rgba(244, 243, 241, 0.94);
+  font-weight: 700;
+  .newOrderBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #353131;
+    height: 77px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  .receiptBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #F4F3F1;
+    height: 77px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
 }

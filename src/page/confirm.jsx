@@ -1,3 +1,5 @@
+import NewOrderBtn from "../component/btn/newOrderBtn";
+import ReceiptBtn from "../component/btn/receiptBtn";
 import Logotype from "../component/logotype";
 import { useNavigate } from "react-router-dom";
 
@@ -21,10 +23,10 @@ function Confirm() {
             <div className="confirm-time">Eta 5 min</div>
             <div className="confirm-id">#4KJWSADF123K</div>
         </div>
-        <div className="container-confirm-bottom">
-            <div className="confirm-bottom-new" onClick={() => navigate("/")}>Gör en ny beställning</div>
-            <div className="confirm-bottom-order" onClick={() => navigate("/orders")}>Se kvitto</div>
-        </div>
+      </div>
+      <div className="container-Btn">
+        <NewOrderBtn />
+        <ReceiptBtn />
       </div>
     </div>
   )
