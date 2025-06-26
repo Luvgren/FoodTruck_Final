@@ -1,6 +1,7 @@
 import NewOrderBtn from "../component/btn/newOrderBtn";
 import ReceiptBtn from "../component/btn/receiptBtn";
 import Logotype from "../component/logotype";
+import EtaDate from "../component/etaDate";
 import { useLocation } from "react-router-dom";
 
 function Confirm() {
@@ -21,7 +22,7 @@ function Confirm() {
         <div className="container-confirm">
             <img className="confirm-box" src="/box.png"></img>
             <div className="confirm-title">Dina wontons tillagas!</div>
-            <div className="confirm-time">Eta 5 min</div>
+            <div className="confirm-time"><EtaDate eta={order.eta}/></div>
             <div className="confirm-id">{order ? `#${order.id}` : ""}</div>
         </div>
       </div>
