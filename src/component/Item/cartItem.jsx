@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from "react-redux";
 import { useGetMenuItemsQuery } from "../../api/data";
 
@@ -13,7 +12,7 @@ function CartItem( { getType } ) {
         <>
             <div id={getType}>
                 {cartItems.length === 0 ? (
-                    <div>Your cart is empty.</div>
+                    <div className='text-center'>Din order är tom, gå tillbaka för att beställa.</div>
                 ) : (
                     cartItems.map(item => (
                         <div className='items' key={item.id}>
