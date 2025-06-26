@@ -20,6 +20,7 @@ function ListCart({ type }) {
     const handleOrder = async () => {
         try {
             const response = await createOrder(orderPayload).unwrap();
+            console.log("POST response:", response);
             navigate("/confirm", { state: { order: response.order } });
         } catch (error) {
             console.error("Oh no, the order failed ):", error);

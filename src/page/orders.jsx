@@ -8,6 +8,8 @@ function Orders() {
   const location = useLocation();
   const order = location.state?.order;
 
+  console.log(order)
+
   return (
     <div className="mainOrder">
       <div className="header">

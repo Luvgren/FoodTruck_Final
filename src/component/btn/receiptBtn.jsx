@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
-function ReceiptBtn() {
+function ReceiptBtn( {order} ) {
 
   const navigate = useNavigate();
   
   return (
     <>
-        <div className="receiptBtn" onClick={() => navigate("/orders")}>Se kvitto</div>
+        <div className="receiptBtn" onClick={() => navigate("/orders", { state: { order } })}>Se kvitto</div>
     </>
   )
 }

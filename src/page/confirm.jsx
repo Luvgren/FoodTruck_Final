@@ -1,11 +1,12 @@
 import NewOrderBtn from "../component/btn/newOrderBtn";
 import ReceiptBtn from "../component/btn/receiptBtn";
 import Logotype from "../component/logotype";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Confirm() {
 
-  const navigate = useNavigate();
+  const location = useLocation();
+  const order = location.state?.order;
 
   return (
     <div className="mainConfirm">
@@ -21,12 +22,12 @@ function Confirm() {
             <img className="confirm-box" src="/box.png"></img>
             <div className="confirm-title">Dina wontons tillagas!</div>
             <div className="confirm-time">Eta 5 min</div>
-            <div className="confirm-id">#4KJWSADF123K</div>
+            <div className="confirm-id">{order ? `#${order.id}` : ""}</div>
         </div>
       </div>
       <div className="container-Btn">
         <NewOrderBtn />
-        <ReceiptBtn />
+        <ReceiptBtn order={order} />
       </div>
     </div>
   )
