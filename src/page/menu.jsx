@@ -1,3 +1,4 @@
+import '../css/menu.css';
 import Cart from "../component/cart";
 import Logotype from "../component/logotype";
 import ListMenu from "../component/listMenu";

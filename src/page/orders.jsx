@@ -1,3 +1,4 @@
+import '../css/order.css';
 import Logotype from "../component/logotype";
 import ListOrder from "../component/listOrder";
 import { useLocation } from "react-router-dom";

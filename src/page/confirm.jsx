@@ -1,3 +1,4 @@
+import '../css/confirm.css';
 import NewOrderBtn from "../component/btn/newOrderBtn";
 import ReceiptBtn from "../component/btn/receiptBtn";
 import Logotype from "../component/logotype";
@@ -26,7 +27,8 @@ function Confirm() {
             <div className="confirm-id">{order ? `#${order.id}` : ""}</div>
         </div>
       </div>
-      <div className="container-Btn">
+      <div className="container-Btn"
+      >
         <NewOrderBtn />
         <ReceiptBtn order={order} />
       </div>

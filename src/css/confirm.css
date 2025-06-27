@@ -1,0 +1,55 @@
+.mainConfirm {
+  height: 100%;
+  position: relative;
+  background-color: #605858;
+  .list-container-confirm {
+    text-align: center;
+    color: #F4F3F1;
+    padding: 0px 16px;
+    .confirm-box {
+      width: 100%;
+    }
+    .confirm-title {
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+    }
+    .confirm-time {
+      font-size: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+    }
+    .confirm-id {
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+    }
+  }
+  
+  /* ta bort? ohoy */
+  .container-confirm-bottom {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    .confirm-bottom-new{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #353131;
+      height: 77px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+    .confirm-bottom-order{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #F4F3F1;
+      height: 77px;
+      border-radius: 4px;
+    }
+  }
+}

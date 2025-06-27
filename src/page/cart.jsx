@@ -1,3 +1,4 @@
+import '../css/cart.css';
 import Cart from "../component/cart";
 import ListCart from "../component/listCart";
 import { useNavigate } from "react-router-dom";

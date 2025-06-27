@@ -1,0 +1,25 @@
+/* - Header - */
+.header {
+  height: 112px;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 64px;
+  height: 64px;
+}
+.counter {
+  position: absolute;
+  background-color: #EB5757;
+  color: white;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  top: 5px;
+  left: 361px;
+  border-radius: 40px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  z-index: 10;
+}

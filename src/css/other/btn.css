@@ -1,0 +1,59 @@
+/* - Button - */
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 10px;
+  gap: 10px;
+  row-gap: 10px;
+  padding: 20px 16px;
+}
+.btn-default {
+  background-color: rgba(241, 240, 236, 0.24);
+  color: #F4F3F1;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: lowercase;
+  border-radius: 4px;
+}
+.btn-default:hover {
+  background-color: #353131;
+}
+.back {
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  height: 64px;
+  width: 64px;
+  font-size: 1.8em;
+  color: #605858;
+  background-color: transparent;
+}
+
+.container-Btn{
+  position: absolute;
+  left: 16px;
+  width: 358px;
+  bottom: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: rgba(244, 243, 241, 0.94);
+  font-weight: 700;
+  .newOrderBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #353131;
+    height: 77px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  .receiptBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #F4F3F1;
+    height: 77px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+}
